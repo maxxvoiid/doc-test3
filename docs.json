@@ -65,8 +65,8 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "Get Started", 
-      "href": "https://example.com"
+      "label": "Get Help", 
+      "href": "https://github.com/Voiid-Studios/voiidcountdown/issues"
     }
   },
   "logo": {
