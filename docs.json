@@ -62,6 +62,13 @@
       }
     ]
   },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Get Started", 
+      "href": "https://example.com"
+    }
+  },
   "logo": {
     "light": "/images/logo.png",
     "dark": "/images/logo.png"
