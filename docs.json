@@ -7,16 +7,21 @@
     "light": "#EA580C",
     "dark": "#9A3412"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
+  "icons": {
+    "library": "lucide"
+  },
   "navigation": {
-    "languages": [
+    "dropdowns": [
       {
-        "language": "en",
+        "dropdown": "Documentation",
+        "icon": "book",
+        "description": "Set up your documentation",
         "groups": [
           {
             "group": "Get Started",
             "pages": [
-              "welcome",
+              "index",
               "quickstart",
               "development"
             ]
@@ -31,7 +36,14 @@
               "essentials/navigation",
               "essentials/reusable-snippets"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "dropdown": "API Documentation",
+        "description": "Reference for the API",
+        "icon": "terminal",
+        "groups": [
           {
             "group": "API Documentation",
             "pages": [
@@ -59,9 +71,7 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://www.linkedin.com/company/mintsearch"
+      "github": "https://github.com/Voiid-Studios/voiidcountdown"
     }
   }
 }
