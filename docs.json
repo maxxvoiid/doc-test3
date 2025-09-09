@@ -63,8 +63,8 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.png",
-    "dark": "/logo/dark.png"
+    "light": "/images/logo.png",
+    "dark": "/images/logo.png"
   },
   "thumbnails": {
     "background": "/images/embeds/background.png"
