@@ -20,7 +20,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "pages/docs/index",
+              "index",
               "pages/docs/quickstart",
               "pages/docs/development"
             ]
