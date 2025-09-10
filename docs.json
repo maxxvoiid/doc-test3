@@ -16,14 +16,13 @@
       {
         "dropdown": "Documentation",
         "icon": "book",
-        "description": "Set up your documentation",
         "groups": [
           {
             "group": "Get Started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "pages/docs/index",
+              "pages/docs/quickstart",
+              "pages/docs/development"
             ]
           },
           {
@@ -41,21 +40,20 @@
       },
       {
         "dropdown": "API Documentation",
-        "description": "Reference for the API",
         "icon": "terminal",
         "groups": [
           {
             "group": "API Documentation",
             "pages": [
-              "api-reference/introduction"
+              "pages/api-docs/introduction"
             ]
           },
           {
             "group": "Endpoint Examples",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete"
+              "pages/api-docs/endpoint/get",
+              "pages/api-docs/endpoint/create",
+              "pages/api-docs/endpoint/delete"
             ]
           }
         ]
