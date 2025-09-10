@@ -21,8 +21,8 @@
             "group": "Get Started",
             "pages": [
               "index",
-              "pages/docs/quickstart",
-              "pages/docs/development"
+              "get-started/quickstart",
+              "get-started/development"
             ]
           },
           {
@@ -45,15 +45,15 @@
           {
             "group": "API Documentation",
             "pages": [
-              "pages/api-docs/introduction"
+              "api-docs/introduction"
             ]
           },
           {
             "group": "Endpoint Examples",
             "pages": [
-              "pages/api-docs/endpoint/get",
-              "pages/api-docs/endpoint/create",
-              "pages/api-docs/endpoint/delete"
+              "api-docs/endpoint/get",
+              "api-docs/endpoint/create",
+              "api-docs/endpoint/delete"
             ]
           }
         ]
