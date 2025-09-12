@@ -1,0 +1,32 @@
+---
+title: ".modifyTimer()"
+---
+
+## Usage Example
+
+```java
+// VCTAPI.modifyTimer(modifier, timeHHMMSS, sender)
+VCTAPI.modifyTimer("add", "00:05:00");   // Adds 5 minutos
+VCTAPI.modifyTimer("take", "00:02:00");  // Takes 2 minutos
+VCTAPI.modifyTimer("set", "00:10:00");   // Sets the timer to 10 minutes
+```
+
+## Parameters
+
+<ResponseField name="modifier" type="string" required>
+  The available actions are `"add"`, `"take"`, and `"set"`
+</ResponseField>
+
+<ResponseField name="timeHHMMSS" type="string" required>
+  The time in HH:MM:SS format
+</ResponseField>
+
+<ResponseField name="sender" type="CommandSender">
+  The one who sent the command; use `null` if there is no player.
+</ResponseField>
+
+## Returns
+
+<ResponseField name="success" type="boolean">
+  Returns `true` if the timer exists and the operation was successful; `false` otherwise.
+</ResponseField>

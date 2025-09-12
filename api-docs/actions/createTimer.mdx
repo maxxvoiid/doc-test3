@@ -1,0 +1,30 @@
+---
+title: ".createTimer()"
+---
+
+## Usage Example
+
+```java
+// VCTAPI.createTimer(timeHHMMSS, timerId, sender)
+Timer timer = VCTAPI.createTimer("00:20:15", "default", null);
+```
+
+## Parameters
+
+<ResponseField name="timeHHMMSS" type="string" required>
+  The time in HH:MM:SS format
+</ResponseField>
+
+<ResponseField name="timerId" type="string">
+  Timer identifier; if not provided (using `null`), “default” is used.
+</ResponseField>
+
+<ResponseField name="sender" type="CommandSender">
+  The one who sent the command; use `null` if there is no player.
+</ResponseField>
+
+## Returns
+
+<ResponseField name="timer" type="Object">
+  The Timer object
+</ResponseField>
