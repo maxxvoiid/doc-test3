@@ -21,7 +21,7 @@
             "group": "Get Started",
             "pages": [
               "index",
-              "get-started/quickoverview",
+              "get-started/quick-overview",
               "get-started/installation-or-updation"
             ]
           },
@@ -43,7 +43,7 @@
           {
             "group": "API Documentation",
             "pages": [
-              "api-docs/introductio"
+              "api-docs/introduction"
             ]
           },
           {
