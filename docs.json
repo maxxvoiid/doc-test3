@@ -43,7 +43,18 @@
           {
             "group": "API Documentation",
             "pages": [
-              "api-docs/introduction"
+              "api-docs/introduction",
+              {
+                "group": "Actions",
+                "icon": "wrench",
+                "pages": [
+                  "api-docs/actions/createtimer",
+                  "api-docs/actions/pausetimer",
+                  "api-docs/actions/resumetimer",
+                  "api-docs/actions/stoptimer",
+                  "api-docs/actions/modifytimer"
+                ]
+              }
             ]
           },
           {
