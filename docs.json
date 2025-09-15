@@ -47,8 +47,8 @@
               {
                 "group": "Actions",
                 "icon": "play",
-                "page": "api-docs/actions/index",
                 "pages": [
+                  "api-docs/actions/index",
                   "api-docs/actions/createtimer",
                   "api-docs/actions/pausetimer",
                   "api-docs/actions/resumetimer",
