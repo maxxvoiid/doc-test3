@@ -46,7 +46,8 @@
               "api-docs/introduction",
               {
                 "group": "Actions",
-                "icon": "wrench",
+                "icon": "play",
+                "page": "api-docs/actions/index",
                 "pages": [
                   "api-docs/actions/createtimer",
                   "api-docs/actions/pausetimer",
@@ -55,14 +56,6 @@
                   "api-docs/actions/modifytimer"
                 ]
               }
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-docs/endpoint/get",
-              "api-docs/endpoint/create",
-              "api-docs/endpoint/delete"
             ]
           }
         ]
