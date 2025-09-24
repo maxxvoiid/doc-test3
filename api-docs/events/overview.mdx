@@ -1,0 +1,39 @@
+---
+title: 'Overview'
+description: 'Information about the main VCT event and how to implement it.'
+---
+
+The VCT API exposes a single main event `VCTEvent`, which is triggered whenever a timer-related action occurs.
+This event provides all the information necessary to react appropriately in your plugin.
+
+## The event itself
+
+
+
+---
+
+## Information available in `VCTEvent`
+
+<ResponseField name="timer" type="Timer">
+  Returns the timer instance (may be null if the timer no longer exists)
+</ResponseField>
+
+<ResponseField name="sender" type="CommandSender">
+  Source that performed the action. This can be a player, the console, or `null` if it comes from another source (such as a plugin)
+</ResponseField>
+
+<ResponseField name="player" type="Player">
+  Player who performed the action, or `null` if it was not a player
+</ResponseField>
+
+<ResponseField name="timerId" type="String">
+  The unique identifier of the timer
+</ResponseField>
+
+<ResponseField name="timeInitial" type="String">
+  Initial time set on the timer in HH:MM:SS format
+</ResponseField>
+
+<ResponseField name="timeLeft" type="String">
+  Current remaining timer time in HH:MM:SS format
+</ResponseField>
