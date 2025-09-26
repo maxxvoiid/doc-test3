@@ -7,10 +7,22 @@ The VCT API exposes a single main event `VCTEvent`, which is triggered whenever 
 This event provides all the information necessary to react appropriately in your plugin.
 
 ## The event itself
+```java
+import voiidstudios.vct.api.VCTEvent;
 
+// Event called when a timer action is performed
+@EventHandler
+public void onVCTEvent(VCTEvent event) {
 
-
----
+  Timer timer = event.getTimer(); // Returns null if the timer no longer exists
+  CommandSender sender = event.getSender(); // It can be a player, the console, or null if it comes from another source, such as a plugin
+  Player player = event.getPlayer(); // Return null if not a player
+  String timerId = event.getTimerId();
+  String timeInitial = event.getInitialTime();
+  String timeLeft = event.getTimeLeft();
+  
+}
+```
 
 ## Information available in `VCTEvent`
 

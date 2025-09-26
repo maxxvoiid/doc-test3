@@ -1,0 +1,58 @@
+---
+title: "Timer Actions Overview"
+description: "High-level overview of all available actions to control existing timers."
+---
+
+## What are Timer Actions?
+
+Timer Actions are **utility methods** that let you control the lifecycle and state of an already active timer using the integrated API.\
+They provide developers and commands with a simple interface to:
+
+- Pause or resume the countdown.
+- Modify the remaining time dynamically.
+- Stop and destroy the timer when it’s no longer needed.
+
+These methods are usually accessed through `VCTActions` depending on the action.
+
+<Warning>
+  Previously, `VCTAPI` was used to execute actions, but it has been **deprecated and will be removed in version 2.1.0**, as it has been renamed to `VCTActions` to better differentiate it.
+</Warning>
+
+The VCT API exposes a single main event `VCTEvent`, which is triggered whenever a timer-related action occurs.
+This event provides all the information necessary to react appropriately in your plugin.
+
+## Available Actions
+
+PLACEHOLDER. PONER TARJETAS PARA DAR HIPERVINCULOS A LOS ACTIONS:
+
+<Columns cols={2}>
+  <Card title="KISS">
+    VCT follows the **KISS** principle.\
+    It’s literally as simple as possible, but still complete and powerful.\
+    You can set up a countdown in seconds, and if you want, extend it with advanced customization.
+  </Card>
+  <Card title="You’re the boss">
+    It’s **your server, your rules**.\
+    VCT doesn’t force you into one way of doing things: you decide how timers look, sound, and behave.\
+    Whether it’s a simple countdown or complex events with other plugins, VCT adapts to your direction.
+  </Card>
+  <Card title="Always Free & Open Source">
+    VCT will **always be 100% free and open source**.\
+    The goal is to give the community a plugin that is simple, powerful, and transparent.
+    No hidden paywalls, no premium tiers — just open development.
+  </Card>
+  <Card title="Support of the Community">
+    Voiid Studios listens to the community.\
+    Your feedback directly influences the future of VCT, helping us improve and add new features.\
+    We grow together with the users, making VCT better with every version.
+  </Card>
+  <Card title="Compatibility">
+    VCT is fully compatible with **Bukkit, Spigot, Paper, and Purpur (1.13+)**.\
+    Paper is highly recommended for the best performance and complete compatibility.\
+    No matter your setup, VCT just works.
+  </Card>
+</Columns>
+
+<Note>
+  There are many actions that require an **active timer** to work. If there is no timer when the action is called, it will fail and return `null`/`false`.
+</Note>

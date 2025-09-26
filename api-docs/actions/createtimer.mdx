@@ -6,18 +6,20 @@ description: "Create and start a timer immediately."
 ## Usage Example
 
 ```java
+//// VCTActions.createTimer(timeHHMMSS, timerId?, sender?) ////
+
 // Create a timer of 20 minutes and 15 seconds with the id "default"
-Timer timer = VCTAPI.createTimer("00:20:15", "default", null);
+Timer timer = VCTActions.createTimer("00:20:15", "default");
 
 // Create a 5-second timer associated with a player
-Timer timer = VCTAPI.createTimer("00:00:05", "pvp1", player);
+Timer timer = VCTActions.createTimer("00:00:05", "pvp1", player);
 ```
 
 ## Behavior
 
 - The timer starts immediately upon creation.
 - At the end of the time:
-  - The `TimerEndEvent` event is triggered
+  - The `FINISH` event is triggered
   - The timer is automatically destroyed after the time set in [ticks_hide_after_ending](https://vctdocs.mintlify.app/usage-guide/configuration#ticks-hide-after-ending%3A-60) has elapsed.
 - You can pause, stop, or modify it using other API methods (documented on separate pages)
 
@@ -42,7 +44,6 @@ Timer timer = VCTAPI.createTimer("00:00:05", "pvp1", player);
 
   - If a player passes, they will receive a message indicating that the timer was created
     - It is usually not necessary to use it directly in the API
-  - For Java issues, it cannot be completely optional, but passing `null` is valid
 </ResponseField>
 
 ## Returns

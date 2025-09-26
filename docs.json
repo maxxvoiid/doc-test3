@@ -48,12 +48,20 @@
                 "group": "Actions",
                 "icon": "play",
                 "pages": [
-                  "api-docs/actions/index",
+                  "api-docs/actions/overview",
                   "api-docs/actions/createtimer",
                   "api-docs/actions/pausetimer",
                   "api-docs/actions/resumetimer",
                   "api-docs/actions/stoptimer",
                   "api-docs/actions/modifytimer"
+                ]
+              },
+              {
+                "group": "Events",
+                "icon": "satellite-dish",
+                "pages": [
+                  "api-docs/events/overview",
+                  "api-docs/events/examples"
                 ]
               }
             ]

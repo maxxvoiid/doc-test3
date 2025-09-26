@@ -118,6 +118,22 @@ Next step is to go to your `plugin.yml` or `paper-plugin.yml` and add Voiid Coun
   </Tab>
 </Tabs>
 
+## Availability Check
+
+Before using the API, it is recommended to check if it is available using:
+
+```java
+if (VCTAPI.isAvailable()) {
+    // The API is ready to use
+}
+```
+
+<Info>
+  This function will return `true` if the API is available or `false` otherwise.
+</Info>
+
+## You're ready to start using the API!
+
 ## Welcome
 
 There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
