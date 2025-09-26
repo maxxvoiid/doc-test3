@@ -19,14 +19,14 @@ Timer timer = VCTActions.createTimer("00:00:05", "pvp1", player);
 
 - The timer starts immediately upon creation.
 - At the end of the time:
-  - The `FINISH` event is triggered
+  - The `FINISH` event is triggered IF the timer is NOT stopped manually.
   - The timer is automatically destroyed after the time set in [ticks_hide_after_ending](https://vctdocs.mintlify.app/usage-guide/configuration#ticks-hide-after-ending%3A-60) has elapsed.
 - You can pause, stop, or modify it using other API methods (documented on separate pages)
 
 ## Parameters
 
 <ResponseField name="timeHHMMSS" type="string" required>
-  The time in HH:MM:SS format
+  The time in HH:MM:SS format.
 
   - Example: “00:05:30” (5 minutes, 30 seconds)
   - If the value is “00:00:00” or does not comply with the format, the timer will not be created
