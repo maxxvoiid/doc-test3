@@ -134,22 +134,15 @@ if (VCTAPI.isAvailable()) {
 
 ## You're ready to start using the API!
 
-## Welcome
+Now that you have imported the API and verified its availability, you are ready to start using it.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+From here, you can explore the following sections to learn how to interact with the VCT API
 
-<Card title="Plant Store Endpoints" icon="leaf" href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json">
-  View the OpenAPI specification file
-</Card>
-
-## Authentication
-
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
-
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
-```
+<Columns cols={2}>
+  <Card title="Actions" href="/api-docs/actions/overview">
+    Learn how to create, pause, resume, stop and modify timers programmatically
+  </Card>
+  <Card title="Events" href="/api-docs/events/overview">
+    Discover how to listen and respond when timers are created, modified, finished, and more
+  </Card>
+</Columns>
