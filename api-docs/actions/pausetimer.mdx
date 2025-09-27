@@ -19,7 +19,6 @@ boolean success = VCTActions.pauseTimer(player);
 
 - Temporarily freezes the countdown of the **currently active timer**.
 - While paused:
-
   - The timer will **not decrease** in time.
   - The bossbar remains visible, showing the last paused value.
   - Events such as `FINISH` will not trigger until the timer is resumed.
@@ -38,7 +37,7 @@ boolean success = VCTActions.pauseTimer(player);
 
 <ResponseField name="success" type="boolean">
   Indicates whether the operation succeeded.
-  
+
   - `true` — the timer exists and is now paused.
   - `false` — no active timer exists or the operation failed.
 </ResponseField>

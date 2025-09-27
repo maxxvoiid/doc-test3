@@ -23,35 +23,23 @@ This event provides all the information necessary to react appropriately in your
 
 ## Available Actions
 
-PLACEHOLDER. PONER TARJETAS PARA DAR HIPERVINCULOS A LOS ACTIONS:
-
 <Columns cols={2}>
-  <Card title="KISS">
-    VCT follows the **KISS** principle.\
-    It’s literally as simple as possible, but still complete and powerful.\
-    You can set up a countdown in seconds, and if you want, extend it with advanced customization.
+  <Card title=".createTimer()" href="/api-docs/actions/createtimer">
+    Create and start a timer immediately
   </Card>
-  <Card title="You’re the boss">
-    It’s **your server, your rules**.\
-    VCT doesn’t force you into one way of doing things: you decide how timers look, sound, and behave.\
-    Whether it’s a simple countdown or complex events with other plugins, VCT adapts to your direction.
+  <Card title=".pauseTimer()" href="/api-docs/actions/pausetimer">
+    Pause the currently active timer
   </Card>
-  <Card title="Always Free & Open Source">
-    VCT will **always be 100% free and open source**.\
-    The goal is to give the community a plugin that is simple, powerful, and transparent.
-    No hidden paywalls, no premium tiers — just open development.
+  <Card title=".resumeTimer()" href="/api-docs/actions/resumetimer">
+    Resume a previously paused timer
   </Card>
-  <Card title="Support of the Community">
-    Voiid Studios listens to the community.\
-    Your feedback directly influences the future of VCT, helping us improve and add new features.\
-    We grow together with the users, making VCT better with every version.
-  </Card>
-  <Card title="Compatibility">
-    VCT is fully compatible with **Bukkit, Spigot, Paper, and Purpur (1.13+)**.\
-    Paper is highly recommended for the best performance and complete compatibility.\
-    No matter your setup, VCT just works.
+  <Card title=".stopTimer()" href="/api-docs/actions/stoptimer">
+    Stop and destroy the active timer immediately
   </Card>
 </Columns>
+<Card title=".modifyTimer()" href="/api-docs/actions/modifytimer">
+  Modify an existing timer by adding, taking, or setting a specific amount of time
+</Card>
 
 <Note>
   There are many actions that require an **active timer** to work. If there is no timer when the action is called, it will fail and return `null`/`false`.

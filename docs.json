@@ -53,7 +53,8 @@
                   "api-docs/actions/pausetimer",
                   "api-docs/actions/resumetimer",
                   "api-docs/actions/stoptimer",
-                  "api-docs/actions/modifytimer"
+                  "api-docs/actions/modifytimer",
+                  "api-docs/actions/examples"
                 ]
               },
               {
@@ -61,6 +62,13 @@
                 "icon": "satellite-dish",
                 "pages": [
                   "api-docs/events/overview",
+                  "api-docs/events/create",
+                  "api-docs/events/change",
+                  "api-docs/events/finish",
+                  "api-docs/events/pause",
+                  "api-docs/events/resume",
+                  "api-docs/events/stop",
+                  "api-docs/events/modify",
                   "api-docs/events/examples"
                 ]
               }

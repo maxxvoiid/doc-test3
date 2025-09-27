@@ -17,12 +17,11 @@ boolean success = VCTActions.resumeTimer(player);
 
 ## Behavior
 
-* Resumes the countdown of a paused timer.
-* While resumed:
-
-  * The timer continues counting down from the paused value.
-  * The bossbar updates accordingly.
-* If no paused timer exists, the method returns `false`.
+- Resumes the countdown of a paused timer.
+- While resumed:
+  - The timer continues counting down from the paused value.
+  - The bossbar updates accordingly.
+- If no paused timer exists, the method returns `false`.
 
 ## Parameters
 
@@ -37,7 +36,7 @@ boolean success = VCTActions.resumeTimer(player);
 
 <ResponseField name="success" type="boolean">
   Indicates whether the operation succeeded.
-  
+
   - `true` — the timer exists and is now resumed.
   - `false` — no active timer exists or the operation failed.
 </ResponseField>
