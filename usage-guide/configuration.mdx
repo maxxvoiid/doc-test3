@@ -38,9 +38,12 @@ This page specifically discusses the options available in the Voiid Countdown Ti
   timerModifySet: '&aThe timer was set to %HH%:%MM%:%SS%.'
   timerModifyTakeError: '&cUse: /vct modify take <HH:MM:SS>'
   timerModifyTake: '&a%HH%:%MM%:%SS% has been removed from the timer.'
-  timerModifyBarcolorError: '&cUse: /vct modify barcolor <color>. &eYou can use these colors: BLUE, GREEN, PINK, PURPLE, RED, WHITE, or YELLOW.'
+  timerModifyBarcolorError: '&cUse: /vct modify bossbar_color <color>. &eYou can use these colors: BLUE, GREEN, PINK, PURPLE, RED, WHITE, or YELLOW.'
   timerModifyBarcolorInvalid: '&cThe color "%COLOR%" of the timer boss bar is invalid. Use BLUE, GREEN, PINK, PURPLE, RED, WHITE, or YELLOW.'
   timerModifyBarcolor: '&aThe color of the timer %TIMER% has been changed to "%COLOR%".'
+  timerModifyBarstyleError: '&cUse: /vct modify bossbar_style <style>. &eYou can use these styles: SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, or SEGMENTED_20.'
+  timerModifyBarstyleInvalid: '&cThe style "%STYLE%" of the timer boss bar is invalid. Use SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, or SEGMENTED_20.'
+  timerModifyBarstyle: '&aThe style of the timer %TIMER% has been changed to "%STYLE%".'
   timerModifySoundError: '&cUse: /vct modify sound <"sound in quotes">'
   timerModifySoundRequireQuotes: '&cThe sound needs to be enclosed in quotation marks (") in order to change it.'
   timerModifySound: '&aThe sound of the timer %TIMER% has been changed to "%SOUND%" &e(%TYPE%)&a.'
@@ -72,17 +75,19 @@ This page specifically discusses the options available in the Voiid Countdown Ti
     sound_volume: 1.0 # The volume of the sound (1.0 is 100%)
     sound_pitch: 1.0 # The pitch of the sound (1.0 is normal pitch)
     bossbar_color: WHITE # The boss bar color is BLUE, GREEN, PINK, PURPLE, RED, WHITE, or YELLOW.
+    bossbar_style: SOLID # The boss bar style is SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, or SEGMENTED_20.
     enabled: true # Defines whether this timer is available for selection.
     sound_enabled: false # Defines whether this timer plays sound every second.
   
   timer_1:
-    text: "&aI'm the Timer 1 :D (%HH%:%MM%:%SS%)" # The text of the boss bar (%HH% hours, %MM% minutes, %SS% seconds)
-    sound: UI_BUTTON_CLICK # The sound of the timer every second
-    sound_volume: 0.5 # The volume of the sound (1.0 is 100%)
-    sound_pitch: 2.0 # The pitch of the sound (1.0 is normal pitch)
-    bossbar_color: GREEN # The boss bar color is BLUE, GREEN, PINK, PURPLE, RED, WHITE, or YELLOW.
-    enabled: true # Defines whether this timer is available for selection.
-    sound_enabled: true # Defines whether this timer plays sound every second.
+    text: "&aI'm the Timer 1 :D (%HH%:%MM%:%SS%)"
+    sound: UI_BUTTON_CLICK
+    sound_volume: 0.5
+    sound_pitch: 2.0
+    bossbar_color: GREEN
+    bossbar_style: SEGMENTED_6
+    enabled: true
+    sound_enabled: true
   ```
 </Expandable>
 
@@ -163,7 +168,7 @@ Messages are configured in `LEGACY` format (regardless of the text format chosen
 
 ## Configuration of Timers
 
-The configuration of the timers is quite simple and easy to create. Let's use this example as a basis:
+The configuration of the timers is simple and flexible. Here is an example:
 
 ```yaml
 Timers:
@@ -173,25 +178,28 @@ Timers:
     sound_volume: 0.5
     sound_pitch: 2.0
     bossbar_color: GREEN
+    bossbar_style: SOLID
     enabled: true
     sound_enabled: true
 ```
 
 <Info>
-  All of these configurations can be changed in-game using the `/vct modify` command and the following modifiers: `text`, `sound`, `sound_volume`, `sound_pitch`, `bossbar_color`, `sound_enabled`
+  All of these configurations can be changed in-game using the `/vct modify` command and the following modifiers: `text`, `sound`, `sound_volume`, `sound_pitch`, `bossbar_color`, `bossbar_style`, `sound_enabled`
 </Info>
 
 ### `Timers:`
 
-This is a very important argument when you create timers in a file other than `config.yml` in the **timers folder.** This argument must be present for the timers inside to be registered.
+Defines the root section where timers are registered.
+This key is **required** when you create timers in a file other than `config.yml` (inside the **timers** folder).
 
 ### `green_timer:`
 
-This is the argument that will give the timer its name so that it can be easily identified, for example: “timer_for_pvp_on”.
+The **name identifier** of the timer.
+Example: `timer_for_pvp_on`.
 
 ### `text: "&aI'm a green timer of (%HH%:%MM%:%SS%) :D"`
 
-This is the text that will be displayed in the boss bar. It also includes variables:
+The text displayed on the boss bar. Supports variables:
 
 - `%HH%` - Displays the current hours (00)
 - `%MM%` - Displays the current minutes (00)
@@ -199,34 +207,42 @@ This is the text that will be displayed in the boss bar. It also includes variab
 
 ### `sound: UI_BUTTON_CLICK`
 
-This is the sound that all players will hear as time runs down. You can find a list of sounds here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+The sound played every second while the timer counts down.
 
-Additionally, you can use sounds from resource packs that play every second, such as:
+- List of available sounds: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+- You can also use **resource pack sounds**:
 
 ```yaml
 sound: resourcepackNameHere:soundNameHere
 ```
 
 <Note>
-  The setting `sound_enabled` must be enabled for you to hear the sound.
+  The setting `sound_enabled` must be set to `true` for the sound to play.
 </Note>
 
 ### `sound_volume: 0.5`
 
-This will set the volume at which the sound will be heard, ranging from `0.1` to `2.0`.
+Volume of the sound. Range: `0.1` to `2.0`.
 
 ### `sound_pitch: 2.0`
 
-This will define the pitch at which the sound will be heard, ranging from `0.1` (very low) to `2.0` (very high).
+Pitch of the sound. Range: `0.1` (very low) to `2.0` (very high).
 
 ### `bossbar_color: GREEN`
 
-This is the color of the boss bar that the timer will have when you create it with `/vct set`. You can find a list of colors here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/BarColor.html
+Color of the boss bar when created.
+You can find a list of colors here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/BarColor.html
+
+### `bossbar_style: SOLID`
+
+Segment style of the boss bar.
+You can find a list of colors here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/BarStyle.html
 
 ### `enabled: true`
 
-Indicate whether the timer can be used and is selectable. If you disable it while using it, it will automatically switch to the default style.
+Whether the timer is selectable/usable.
+If disabled while in use, it will automatically switch to the **default** style.
 
 ### `sound_enabled: true`
 
-Indicates whether the timer sound should be heard.
+Controls whether the timer’s sound should play.
